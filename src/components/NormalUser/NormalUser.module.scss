@@ -1,0 +1,188 @@
+// .NormalUser {
+//   .Navbar {
+//     background-color: cornflowerblue;
+//     padding: 0.5rem;
+//     cursor: pointer;
+//     color: #f9f6f6;
+//   }
+
+//   .Main {
+//     display: flex;
+//     flex-direction: row;
+
+//     .RestaurantList {
+//       flex: 2;
+//       display: flex;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       gap: 0.5rem;
+//       padding: 0.5rem;
+//       overflow-y: scroll;
+
+//       .Restaurant {
+//         display: flex;
+//         flex-direction: column;
+//         width: 7.5rem;
+//         box-shadow: 0px 0px 4px #d2d0d0;
+//         border-radius: 0.5rem;
+
+//         .RestaurantImage {
+//           width: 100%;
+//           border-radius: 0.5rem;
+//           cursor: pointer;
+//         }
+//         .RestaurantInfo {
+//           display: flex;
+//           flex-direction: column;
+//           font-family: "Times New Roman", Times, serif;
+//           font-size: small;
+//         }
+//       }
+//       .SelectedRestaurant {
+//         flex: 1;
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: center;
+//         align-items: center;
+//         width: 7.5rem;
+//         box-shadow: 0px 0px 4px #d2d0d0;
+//         border-radius: 0.5rem;
+//         gap: 1rem;
+
+//         .RestaurantImage {
+//           width: 12rem;
+//           border-radius: 0.5rem;
+//           cursor: pointer;
+//         }
+//         .RestaurantInfo {
+//           display: flex;
+//           flex-direction: column;
+//           font-family: "Times New Roman", Times, serif;
+//           font-size: small;
+//         }
+//       }
+//     }
+//     .Profile {
+//       flex: 1;
+//       span {
+//         cursor: pointer;
+//         color: #d2d0d0;
+//       }
+//     }
+//   }
+// }
+
+.NormalUser {
+  max-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // overflow-y: scroll;
+  .Navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .Main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    .Profile {
+      flex: 1;
+
+      span {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    // .RestaurantListCOntainer {
+    //   flex: ;
+    //   display: flex;
+    //   // flex-direction: column;
+    .RestaurantList {
+      flex: 2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1rem;
+      overflow-y: scroll;
+      .Restaurant {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 calc(33.33% - 1rem);
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        .RestaurantImage {
+          width: 100%;
+          height: auto;
+          border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .RestaurantInfo {
+          padding: 1rem;
+          text-align: center;
+
+          span {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .SelectedRestaurant {
+        flex: 0 0 calc(50% - 1rem);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        gap: 1rem;
+
+        .RestaurantImage {
+          width: 100%;
+          height: auto;
+          border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .RestaurantInfo {
+          text-align: center;
+          padding: 0.5rem;
+
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+
+          input[type="text"] {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+          }
+
+          button {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #555;
+            }
+          }
+        }
+      }
+    }
+  }
+  // }
+}
